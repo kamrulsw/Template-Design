@@ -1,209 +1,205 @@
-
-
- /* abc {
-    background-color: rgb(13, 108, 139);
-    height: 10px;
-  }
-  
-  h1 {
-    color: navy;
-    margin-left: 20px;
-  }
-  */
-  body {
-    background-color: #acb6e4;
-  }
-  /* Add a green background color to the top navigation */
-.topnav {
-    background-white: rgba(41, 196, 27, 0.048);
-    overflow: hidden;
-    position: absolute;
-    left: 90px;
-    width: 98%;
-    height: 5%;
-    }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    /*float: left; */
-    color: #f7f0e6;
+*{
+    margin: 0;
+    padding: 0;  
+}
+    
+.container{
+    display:grid;
+    max-width: 960px;
+    height: auto;
+    align-items: center;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr .6fr 2fr 1fr 0.6fr 0.1fr;
+    grid-template-areas: 
+    "nav nav"
+    "contain1 contain2"
+    "ima ima"
+    "info-div info-div2"
+    "subscr subscr2"
+    "footer footer";
+    grid-gap:0.1rem;
+    background-color:#acb6e4;
+    color: black;
     text-align: center;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 17px;
-    left: 50px;
-    position: relative;
-    }
-
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: rgb(54, 83, 211);
-    color: rgb(12, 209, 111);
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #4CAF50;
-    color:  rgb(160, 20, 102);
-  }
-
-  img {
+}
+nav {   
+    grid-area: nav;
+    align-items: center;
+    border-bottom: solid 1px rgb(204, 202, 202);
+}
+.navbar-brand {
+    float: left;   
     height: 30px;
     width: 55px;
     border-radius: 50%;
     position: relative;
-    left: 50px;
-    top: 0px;
-    
-  }
-
-  .sundar {
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    margin-left: 30px;
-    margin-right: 60px;
-    display: flex;
-       
-    /*margin: 10px;
-    display: flex;
-    flex: 50%; */
-
-   }
-   .ban {
-     
-     /* margin-left: 15px; */
-     width: 47%;
-     height: 96%;
-     margin: 30px;
-     font-style: normal;
-     font-family: 'Times New Roman', Times, serif;
-     font-size: 30px;
-     text-align: center;
-    
-    
-   }
-   .ban2 {
-     width: 47%;
-     height: 96%;
-     margin: 30px;
-     margin-right: 80px;
-     font-style: normal;
-     font-family: 'Times New Roman', Times, serif;
-     font-size: 15px;
-     text-align: justify;
-     padding: 5px;
-    }
-   
-  .kam {
-    height: 100%;
-    width: 96%;
-    border-radius: 8px;
-    position: absolute;
-    top: 180px;
-    margin-left: 10px;
-    margin-bottom: 130px;
-  }
-  .beauty{
-   position: absolute;
-   top: 815px;
-   left: 65px;
-  font-size: 12px;
-  }
-  .content{
-    width: 100%;
-    height: 280px;
-    border: 1px solid #acb6e4;
-    position: absolute;
-    top: 860px;
-    margin-left: 30px;
-    margin-right: 60px;
-    display: flex;
-   
-  }
-  .cont1, .cont2 {
-    width: 47%;
-    height: 80%;
-    border: 1px solid #acb6e4;
-    margin: 30px;
-    margin-bottom: 5px;
-    
-    font-style: normal;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
-    text-align: justify;
-
-  }
-  
-  .column {
+    left: 30px;
+    top: -25px;
+}
+.brand-name{
     float: left;
-    width: 40%;
-    padding: 5px;
-  }
-
+    margin-left: -18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 20px;
+    font-size: 0.6rem;
+}
+.menu {
+    margin-right:40px;   
+}
+.link {
+    padding: 0 10px 0 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;    
+}
+/* Change the color of links on hover */
+.menu-link a:hover {
+    background-color: rgb(54, 83, 211);
+    color: rgb(12, 209, 111);
+}  
+  /* Add a color to the active/current link */
+.menu-link a.active {
+    background-color: #4CAF50;
+    color:  rgb(160, 20, 102);
+}
+.subscribe {
+    float: right;
+    background-color: lightseagreen;
+    color: white;
+    padding: 10px 10px 10px 20px;
+    margin-right: 0px;
+    font-weight: bold;
+}
+#contain1 {
+    grid-area:contain1;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 0 0 50px;    
+    margin: 0;
+}   
   
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  .row {
-    display: inline-block;
-      position: relative;
-  }
-  
-  .column {
-    flex: 33.33%;
-    padding: 5px;
-    top: 150px;
-  }
- 
-.foot {
-  position: absolute;
-  left: 25px;
-  top: 1200px;
-  width: 100%;
-  height: 10%;
-  background-color: #acb6e4;
-  color: rgb(16, 6, 110);
-  text-align: center;  
-  border: 1px solid #acb6e4;
-  }
-.foot1 {
-  width: 70px;
-  height: 200px;
-  margin: 30px;
-  float: center;
-  display: inline-block;
-  font-size: 15px;
+#contain2{
+    grid-area: contain2;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-weight: 200;   
+    padding: 0 50px 0 0 ;
+    margin: 0;
 }
-#foot2  {
-  background-color: rgb(155, 18, 102);
+#ima{  
+    grid-area: ima;
+    margin: 0;
+}
+#ima img{
+    margin: 0;
+    max-width: 850px;
+    height: auto;
+}
+#ima .picinfo{
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 40px;
+    color: white;
+    font-size: .7rem;
+    padding: 10px;
+}
+#info-div{   
+    grid-area: info-div;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding: 0 20px 0 50px;   
 }
 
-.extra {
-  position: absolute;
-  left: 25px;
-  top: 1300px;
-  width: 100%;
-  height: 15qgh %;
-  border: 5px solid red;  
+#info-div2{
+    grid-area: info-div2;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-weight: 200;    
+    padding: 0 50px 0 20px;   
+    margin-bottom: 40px;
+}
+#subscr {
+    grid-area: subscr;    
+}
+#subcribe2 {   
+    grid-area: subscr2;       
+}
+.form{
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+}
+.sub{
+    text-align: center;
+    padding: 10px 40px 10px 40px;
+    border: solid 1px rgb(173, 170, 175);
+     font-weight: bold; 
+    background-color: rgb(8, 52, 90);
+}
+.social{
+    text-align: center;
+    padding: 10px 80px 10px 80px;
+    border: solid 1px rgb(173, 170, 175);
+    margin: 5px;
+    font-weight: bold; 
+    background-color: rgb(8, 52, 90);
 }
 
-.extra1 {
-  width: 70px;
-  height: 200px;
-  margin: 30px;
-  float: left;
-  font-size: 15px;
+footer{    
+    grid-area: footer;
+    margin-bottom: 0px;
+    color: rgb(199, 25, 132);
 }
-.extra2 {
-  width: 70px;
-  height: 200px;
-  margin: 30px;
-  float: left;
-  font-size: 15px;
+footer .copyright{
+ float: left;
+ margin: 0 0 0 20px;
+}
+.link2-class {
+    padding: 0 15px 0 0px;
+    font-weight: bold;
+    color: rgb(199, 25, 132);
+    font-size: 1.1rem;    
+}
+footer .icon {
+    float: right;    
+    margin-right: 10px;
+    color: rgb(199, 25, 132);
+}
+i { 
+    color: whitesmoke;   
+    padding: 10px;
+    border: solid 1px rgb(199, 25, 132);
+}
+
+@media only screen and (max-width: 600px) {
+    .container{        
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 1fr 1fr 1.5fr 1fr 1fr 1fr 1fr 0.4fr;
+        grid-template-areas:  
+        "nav"
+        "contain1"
+        "contain2"
+        "ima"
+        "info-div"
+        "info-div2"
+        "subscr"
+        "subscr2"
+        "footer";        
+    }
+    #ima img{  
+        max-width: 450px;
+        min-width: 300px;
+        height: auto;   
+    }
+    .social {
+        font-size: .8rem;
+        text-align: center;
+        padding: 10px 60px 10px 60px;
+        border: solid 1px blueviolet;
+        margin: 5px;    
+    }
+    
 }
